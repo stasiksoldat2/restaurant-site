@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ресторан «Кам’яниця» — бронювання столика</title>
+  <meta name="description" content="Галицька кухня в центрі міста. Забронюйте столик онлайн за хвилину.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top">
+    <a class="logo" href="#top">Кам’яниця</a>
+    <nav>
+      <a href="#menu">Меню</a>
+      <a href="#booking">Бронювання</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-text">
+      <h1>Галицька кухня за столом, який чекає на вас</h1>
+      <p>Борщ за бабусиним рецептом, домашні вареники й вечори при свічках. Оберіть дату й час, а ми підготуємо столик.</p>
+      <a class="btn" href="#booking">Забронювати столик</a>
+    </div>
+    <dl class="hero-facts">
+      <div><dt>Щодня</dt><dd>12:00–23:00</dd></div>
+      <div><dt>Адреса</dt><dd>вул. Руська, 12, Тернопіль</dd></div>
+      <div><dt>Телефон</dt><dd>+380 (35) 200-00-00</dd></div>
+    </dl>
+  </section>
+
+  <section class="section" id="menu">
+    <h2>Меню</h2>
+    <div class="menu-grid">
+      <div class="menu-col">
+        <h3>Перші страви</h3>
+        <ul>
+          <li><span>Борщ із пампушками та салом</span><b>140 грн</b></li>
+          <li><span>Грибна юшка з лісових грибів</span><b>130 грн</b></li>
+          <li><span>Галицький капусняк</span><b>120 грн</b></li>
+        </ul>
+      </div>
+      <div class="menu-col">
+        <h3>Гарячі страви</h3>
+        <ul>
+          <li><span>Вареники з картоплею та грибами</span><b>150 грн</b></li>
+          <li><span>Деруни зі сметаною</span><b>135 грн</b></li>
+          <li><span>Котлета по-київськи з пюре</span><b>230 грн</b></li>
+          <li><span>Банош із бринзою та шкварками</span><b>180 грн</b></li>
+        </ul>
+      </div>
+      <div class="menu-col">
+        <h3>Десерти й напої</h3>
+        <ul>
+          <li><span>Сирник із ягідним соусом</span><b>110 грн</b></li>
+          <li><span>Яблучний струдель</span><b>105 грн</b></li>
+          <li><span>Узвар із сухофруктів</span><b>60 грн</b></li>
+          <li><span>Карпатський трав’яний чай</span><b>70 грн</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section booking" id="booking">
+    <h2>Забронювати столик</h2>
+    <div class="booking-layout">
+
+      <form id="booking-form" novalidate>
+        <div class="row">
+          <label>Дата
+            <input type="date" id="date" required>
+          </label>
+          <label>Кількість гостей
+            <select id="guests"></select>
+          </label>
+        </div>
+
+        <fieldset>
+          <legend>Час</legend>
+          <div id="slots" class="slots"></div>
+          <p id="slots-hint" class="hint"></p>
+        </fieldset>
+
+        <div class="row">
+          <label>Ім’я
+            <input type="text" id="name" placeholder="Олена" autocomplete="name">
+          </label>
+          <label>Телефон
+            <input type="tel" id="phone" placeholder="+380 50 123 45 67" autocomplete="tel">
+          </label>
+        </div>
+
+        <label>Побажання (необов’язково)
+          <textarea id="comment" rows="3" placeholder="Наприклад: столик біля вікна, дитяче крісло, день народження"></textarea>
+        </label>
+
+        <p id="form-error" class="error" role="alert" hidden></p>
+        <button type="submit" class="btn">Підтвердити бронювання</button>
+      </form>
+
+      <aside>
+        <div id="confirmation" class="confirmation" hidden></div>
+
+        <div class="my-bookings">
+          <h3>Мої бронювання</h3>
+          <ul id="my-list"></ul>
+          <p id="my-empty" class="hint">Тут з’являться ваші бронювання.</p>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <section class="section" id="contacts">
+    <h2>Контакти</h2>
+    <div class="contacts">
+      <p><b>Адреса:</b> вул. Руська, 12, Тернопіль</p>
+      <p><b>Телефон:</b> <a href="tel:+380352000000">+380 (35) 200-00-00</a></p>
+      <p><b>Пошта:</b> <a href="mailto:hello@kamyanytsia.example">hello@kamyanytsia.example</a></p>
+      <p><b>Графік роботи:</b> щодня з 12:00 до 23:00</p>
+      <p>Бронювання понад 10 гостей та банкети приймаємо за телефоном.</p>
+    </div>
+  </section>
+
+  <footer class="footer">© <span id="year"></span> Ресторан «Кам’яниця». Усі права захищено.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
